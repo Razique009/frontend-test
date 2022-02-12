@@ -1,0 +1,134 @@
+@import "normalize.css";
+
+body {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #18181b;
+}
+
+.logo {
+  display: block;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.loader {
+  display: block;
+  max-width: 64px;
+  margin: 1rem auto;
+  animation: shake 1s cubic-bezier(0.75, 0, 0.175, 1) infinite;
+}
+
+@keyframes shake {
+  0 {
+    transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    transform: translate(-10px, 0) rotate(-20deg);
+  }
+  30% {
+    transform: translate(10px, 0) rotate(20deg);
+  }
+  50% {
+    transform: translate(-10px, 0) rotate(-10deg);
+  }
+  60% {
+    transform: translate(10px, 0) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  border: 2px solid #e5e7eb;
+}
+
+.pokemon__stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+  background-color: #f3f4f6;
+}
+
+.pokemon__sprite {
+  max-width: 100%;
+}
+
+.pokemon__name {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.pokemon__stats {
+  width: 100%;
+  /* background-color: #e5e7eb; */
+  border-radius: 0.5rem;
+  border-collapse: collapse;
+}
+
+.pokemon__stats tr:nth-child(odd) {
+  background-color: #f3f4f6;
+}
+
+.pokemon__stats th,
+.pokemon__stats td {
+  width: 50%;
+  padding: 0.5rem;
+  border-top: 2px solid #e5e7eb;
+}
+
+.pokemon__stats th {
+  text-align: left;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  padding: calc(0.5rem - 1px);
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  background-color: #e5e7eb;
+
+  &:focus-within {
+    border-color: #bfdbfe;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(#bfdbfe, 0.5);
+  }
+}
+
+.search-input__search-icon {
+  flex-shrink: 0;
+  width: 24px;
+  margin-right: 0.25rem;
+  color: #9ca3af;
+}
+
+.search-input__input {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  appearance: none;
+  background-color: transparent;
+
+  &::placeholder {
+    color: #9ca3af;
+  }
+
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration {
+    display: none;
+  }
+}
