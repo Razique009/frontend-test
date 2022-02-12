@@ -12,6 +12,6 @@ Your mission is to complete this Pokedex app, using Vue and your frontend knowle
 
 3. When the app is first mounted, we want to show a random Pokemon using the `getRandomPokemon` function and the `PokemonCard` component. While fetching data, you should show a loading spinner using the `Loader` component.
 
-4. Add the ability to search for a Pokemon by name or a National Pokedex number using the `SearchField` component and the `getPokemon` function. You should debounce the search to reduce the number of API requests while typing in the field by using the `debounce` function from `lodash-es`.
+4. Add the ability to search for a Pokemon by name or a National Pokedex number using the `SearchField` component and the `getPokemon` function. You should debounce the search to reduce the number of API requests while typing in the field by using the `debounce` function from `lodash-es`. **Note:** The API expects names to be lowercase, so you should transform the value before sending the request.
 
 5. **Bonus:** Implement the steps above using the new Composition API instead of the Options API.
