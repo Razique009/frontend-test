@@ -7,32 +7,12 @@
       /> -->
     </div>
     <div class="pokemon__details">
-      <h3 class="pokemon__name">{{ pokemon.name | capitalize }}</h3>
+      <h3 class="pokemon__name">{{ pokemon && pokemon.pokemon.data.name | capitalize }}</h3>
       <table class="pokemon__stats">
-        <tbody>
+        <tbody v-for="(pokemons, index) in pokemon.pokemon.data.stats" :key="index">
           <tr>
-            <th>HP</th>
-            <td>INSERT STAT</td>
-          </tr>
-          <tr>
-            <th>Attack</th>
-            <td>INSERT STAT</td>
-          </tr>
-          <tr>
-            <th>Defense</th>
-            <td>INSERT STAT</td>
-          </tr>
-          <tr>
-            <th>Sp. Atk</th>
-            <td>INSERT STAT</td>
-          </tr>
-          <tr>
-            <th>Sp. Def</th>
-            <td>INSERT STAT</td>
-          </tr>
-          <tr>
-            <th>Speed</th>
-            <td>INSERT STAT</td>
+            <th>{{ pokemons.stat.name }}</th>
+            <td>{{ pokemons.base_stat }}</td>
           </tr>
         </tbody>
       </table>

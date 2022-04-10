@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@vue/composition-api": "^1.4.5",
+    "axios": "^0.26.1",
     "lodash-es": "^4.17.21",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.14"
