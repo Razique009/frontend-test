@@ -19,7 +19,7 @@ export default {
   data () {
     return {
       pokemon: {},
-      searchValue: '' ,
+      searchValue: ' ' ,
     }
   },
   components: {
